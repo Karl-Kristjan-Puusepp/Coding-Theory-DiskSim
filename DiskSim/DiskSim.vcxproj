@@ -118,6 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,10 +130,10 @@
   <ItemGroup>
     <ClInclude Include="Code.h" />
     <ClInclude Include="Decoder.h" />
+    <ClInclude Include="LinAlgUtil.h" />
     <ClInclude Include="QC_LDPC_Code.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Decoder.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

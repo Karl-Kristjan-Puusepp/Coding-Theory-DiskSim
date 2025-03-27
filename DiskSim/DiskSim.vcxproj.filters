@@ -24,11 +24,11 @@
     <ClInclude Include="QC_LDPC_Code.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LinAlgUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Decoder.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
