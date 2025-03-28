@@ -67,7 +67,7 @@ int main() {
         uint64_t totalBits = static_cast<uint64_t>(codeLength) * numSimulations;
 
         // Parallelized Monte Carlo simulation for the given p.
-#pragma omp parallel for reduction(+: totalUnrecoveredPeeling, totalUnrecoveredGE) schedule(static)
+        #pragma omp parallel for reduction(+: totalUnrecoveredPeeling, totalUnrecoveredGE) schedule(static)
         for (int sim = 0; sim < numSimulations; ++sim) {
             // Create a thread-local RNG using a seed based on a global random device and the iteration index.
             std::mt19937 localRng(rd() + sim);
