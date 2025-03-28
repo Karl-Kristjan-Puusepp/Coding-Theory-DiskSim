@@ -12,7 +12,7 @@
 #include <omp.h>
 #endif
 
-// Helper: Generate a random erasure pattern for a codeword of length N with exactly e erasures.
+// Generate a random erasure pattern for a codeword of length N with exactly e erasures.
 template <std::size_t N>
 std::bitset<N> generateErasurePatternExact(int e, std::mt19937& rng) {
     std::bitset<N> ers;
@@ -27,7 +27,7 @@ std::bitset<N> generateErasurePatternExact(int e, std::mt19937& rng) {
     return ers;
 }
 
-// New Helper: Generate a probability distribution for k elements using a softmax transformation on normal samples.
+// Generate a probability distribution for k elements using a softmax transformation on normal samples.
 // The parameter alpha controls the "sharpness" of the distribution.
 std::vector<double> generateSoftmaxDistribution(int k, std::mt19937& rng, double alpha = 1.0) {
     std::normal_distribution<double> norm(0.0, 1.0);
@@ -47,7 +47,7 @@ std::vector<double> generateSoftmaxDistribution(int k, std::mt19937& rng, double
     return expSamples;
 }
 
-// Optimized Helper: Sample an index from a discrete distribution given by probs.
+// Sample an index from a discrete distribution given by probs.
 // This function uses a manual cumulative sum rather than constructing a std::discrete_distribution.
 int sampleFromDistribution(const std::vector<double>& probs, std::mt19937& rng) {
     double r = std::uniform_real_distribution<double>(0.0, 1.0)(rng);
